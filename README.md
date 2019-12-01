@@ -4,6 +4,6 @@
 Hackernews backend app
 
 ### technique
-- Express JS (qrapql REST)
+- Express JS (qrapql)
 - qrapql-yoga
 - prisma
