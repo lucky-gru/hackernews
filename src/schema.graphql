@@ -1,6 +1,17 @@
+enum LinkOrderByInput {
+  id_ASC
+  id_DESC
+  description_ASC
+  description_DESC
+  url_ASC
+  url_DESC
+  createdAt_ASC
+  createdAt_DESC
+}
+
 type Query {
   info: String!
-  feed: [Link!]!
+  feed(filter: String, skip: Int, first: Int, orderBy: LinkOrderByInput): [Link!]!
 }
 
 type Mutation {
@@ -41,3 +52,4 @@ type Vote {
   link: Link!
   user: User!
 }
+
